@@ -4,11 +4,11 @@
 
 function first(cb, num) {
     let sqrt = num * num;
-    return cb(sqrt);
+    return cb(sqrt, isEven);
 }
 
-function second(num) {
-    return isEven(num);
+function second(num, cb) {
+    return cb(num);
 }
 
 function isEven(num) {
