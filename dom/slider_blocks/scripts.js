@@ -1,5 +1,6 @@
 let sliderValEl = document.getElementById('sliderValue');
 let slider = document.getElementById('boxSlider');
+let menu = document.querySelector('.menu')
 const boxWrapper = document.querySelector('.box__container');
 const button = document.querySelector('.button');
 
@@ -7,6 +8,8 @@ sliderValEl.innerHTML = slider.value;
 
 button.addEventListener('click', (e) => {
   button.classList.toggle("change");
+  menu.classList.toggle("move-in");
+  boxWrapper.classList.toggle("move-out");
 });
 
 slider.addEventListener('change', (e) => {

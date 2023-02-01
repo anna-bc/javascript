@@ -1,10 +1,19 @@
+@keyframes slideIn {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 * {
   font-family: sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #CFCFCD;
+  background-color: #cfcfcd;
   color: #563440;
 }
 
@@ -43,29 +52,29 @@ body {
 }
 
 #boxSlider {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   width: 100%;
   height: 25px;
-  background: #9A879D;
+  background: #9a879d;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s; 
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 #boxSlider:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 #boxSlider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px; 
-    background: #563440; 
-    cursor: pointer;
-  }
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #563440;
+  cursor: pointer;
+}
 
 .header__item--menu-btn {
   flex-grow: 1;
@@ -97,14 +106,14 @@ body {
 }
 
 .button {
-    float: right;
-    margin-right: 4vw;
-    margin-top: 2vh;
-    padding: 1vh;
+  float: right;
+  margin-right: 4vw;
+  margin-top: 2vh;
+  padding: 1vh;
 }
 
 .button:hover {
-    background-color:#9A879D;
+  background-color: #9a879d;
 }
 
 .bar1,
@@ -127,4 +136,50 @@ body {
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu {
+  display: none;
+  height: 50%;
+  position: absolute;
+  top: 10vh;
+  left: 0px;
+  transition: top 3s;
+}
+
+.navbar {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar > li {
+  display: table-cell;
+  height: 100px;
+  width: 100%;
+  font-size: 26px;
+  background-color: #563440;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.navbar > li:hover {
+  background-color: #9a879d;
+}
+
+.move-in {
+  width: 100%;
+  display: block;
+  animation: slideIn 1s;
+  position: absolute;
+  top: 10vh;
+  left: 0px;
+}
+
+.move-out {
+  display: none;
 }

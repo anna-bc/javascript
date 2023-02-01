@@ -1,0 +1,149 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #cfcfcd;
+  color: #563440;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.header__item--logo {
+  flex-grow: 1;
+}
+
+.header__item--logo > h1 {
+  color: #563440;
+  margin: 3vh 0 0 3vh;
+}
+
+.wrapper__item--header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: thin solid #563440;
+}
+
+.header__item {
+  width: 20vw;
+  height: 100%;
+}
+
+.header__item--menu-btn {
+  flex-grow: 1;
+}
+
+.button {
+  float: right;
+  margin-right: 4vw;
+  margin-top: 2vh;
+  padding: 1vh;
+}
+
+.button:hover {
+  background-color: #9a879d;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #563440;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+button, #todoSubmit {
+    background-color: #9a879d;
+    color: white;
+}
+
+button {
+    background-color: #563440;
+}
+
+.bodyWrapper {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    border: thin solid #9a879d;
+}
+
+#todoList {
+    padding: 0;
+}
+
+.todo-item {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #9a879d;
+}
+
+.todo-item__elem {
+    width: 100px;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.todo-item__elem--prio {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.prio--box {
+    height: 40px;
+    width: 40px;
+    font-size: 28px;
+    text-align: center;
+    background-color: #cfcfcd;
+}
+
+.todo-item__elem--infos {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item__elem--buttons {
+    flex-grow: 0;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.delete-btn {
+    height: 30px;
+    width: 60px;
+    flex-grow: 0;
+}
+
+.checked {
+    opacity: 0.5;
+}
