@@ -49,15 +49,18 @@ html, body {
     width: var(--cell-dimensions);
     height: var(--cell-dimensions);
     border: 5px solid black;
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.board__cell--player1:before {
-    font-size: 96px;
+.board__cell--player1::after {
     content: 'X';
-    align-content: center;
 }
-.board__cell--player2:before {
-    font-size: 96px;
+
+
+.board__cell--player2::after {
     content: 'O';
 }
 

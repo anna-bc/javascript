@@ -36,9 +36,7 @@ function createBoard(rows, cols, d = 0) {
             if (winner !== undefined) {
                 return;
             }
-          if (
-            markCell(board, { row: rowIndex, col: colIndex }, currentPlayer)
-          ) {
+          if (markCell(board, { row: rowIndex, col: colIndex }, currentPlayer)) {
             updateBoard(board);
             currentPlayer = currentPlayer == 1 ? 2 : 1;0
             winner = checkWinState(board);
@@ -53,7 +51,6 @@ function createBoard(rows, cols, d = 0) {
                 $winnerAnnounce.innerText = `The Winner is Player ${winner.winner}`;
                 $condAnnounce.innerText = `with a winning ${winner.condition}`;
                 $wrapper.appendChild($winnerDiv);
-                event.target.removeEventListener('click', clickCell)
             }
 
           }
@@ -172,8 +169,8 @@ function createBoard(rows, cols, d = 0) {
     allEqual = true;
     for (i = 1; i < board.length && allEqual; i++) {
         allEqual =
-          board[(board.length - 1) - i][(board.length - 1) - ((board.length - 1) - i)] != 0 &&
-          board[(board.length - 1) - i][(board.length - 1) - ((board.length - 1) - i)] === board[(board.length - 1) - (i - 1)][(board.length - 1) - ((board.length - 1) - (i - 1))];
+          board[(board.length - 1) - i][i] != 0 &&
+          board[(board.length - 1) - i][i] === board[(board.length - 1) - (i - 1)][i - 1];
       }
 
       if (allEqual) {
@@ -185,4 +182,4 @@ function createBoard(rows, cols, d = 0) {
   window.addEventListener("DOMContentLoaded", () =>
     renderBoard(board, currentPlayer)
   );
-})(createBoard(3, 3), 1);
+})(createBoard(5, 5), 1);
