@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="wrapper__item wrapper__item--header">
+            <div class="header__item header__item--logo">
+                <h1>Todo App</h1>
+            </div>
+            <div class="header__item"></div>
+            <div class="header__item header__item--menu-btn">
+                <div class="button">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+            </div>
+        </header>
+
+        <div class="bodyWrapper">
+            <form id="todoForm" action="">
+                <input type="text" placeholder="Write ToDo here" id="todoInput">
+                <input type="date" min="2023-01-01" id="dueDate">
+                <select type="select" id="priority">
+                    <option value="1">Very High</option>
+                    <option value="2">High</option>
+                    <option value="3">Medium</option>
+                    <option value="4">Low</option>
+                    <option value="5">Very Low</option>
+                </select>
+                <input type="submit" value="Submit" id="todoSubmit">
+            </form>
+        
+            <div class="todoWrapper">
+                <ul id="todoList"></ul>
+            </div>
+        
+            <button id="sortByPrio">Sort by Priority</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

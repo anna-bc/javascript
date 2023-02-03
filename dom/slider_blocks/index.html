@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="wrapper__item wrapper__item--header">
+            <div class="header__item header__item--logo">
+                <h1>Slider App</h1>
+            </div>
+
+            <div class="header__item header__item--slider">
+              <input type="range" min="5" max="200" value="50" class="slider__item" id="boxSlider">
+              <div class="slider__item slider__item--value">
+                <span class="slider__item">Value: </span>
+              <span id="sliderValue"><span>
+                </div>
+            </div>
+
+            <div class="header__item header__item--menu-btn">
+                <div class="button">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+            </div>
+        </header>
+        <div class="wrapper__item wrapper__item--box">
+            <div class="box__container"></div>
+        </div>
+        <div class="menu">
+            <ul class="navbar">
+                <li class="navbar__item">Home</li>
+                <li class="navbar__item">Profile</li>
+                <li class="navbar__item">About</li>
+                <li class="navbar__item">Contact</li>
+            </ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
